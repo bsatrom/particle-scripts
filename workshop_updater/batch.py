@@ -85,9 +85,9 @@ def inspect():
     #
     #
 
-    flag1 = "Bootloader module #0 - version 311," in text
-    flag2 = "System module #1 - version 1213," in text
-    flag3 = "UUID: CE20033C798A9F83A504B3FC464E7C80317124D7CAD32D68125CAB184014E558" in text
+    flag1 = "Bootloader module #0 - version 401," in text
+    flag2 = "System module #1 - version 1321," in text
+    flag3 = "UUID: E2F320994F576FE6463F9D6CFD40911B4750E8B071DED794EBC8CD0D2976D157" in text
 
 
 # Platform: 12 - Argon
