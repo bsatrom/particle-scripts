@@ -339,15 +339,25 @@ def updateArgonShit():
         sys.exit(1)
         return False
 
-    # with open(os.path.join(directory, 'flashboot.bat'), 'w') as OPATH:
-    # 	OPATH.writelines([
-    #		'particle flash --serial --yes bootloader.bin'
-    # 	])
-
     command = 'particle flash --serial --yes ' + argonNCPUpdate
     print('attempting to flash argon esp32 update')
     subprocess.call(command, shell=True)
 
+
+    time.sleep(5)
+
+
+def updateArgonSoftdevice():
+    print('attempting to put device in SETUP mode')
+    if requestSETUPMode() == False:
+        print('Failed to put the device into SETUP mode... bailing')
+        sys.exit(1)
+
+    isInSetupMode = ports() is not None
+    if not isInSetupMode:
+        print('Failed to put the device into SETUP mode... bailing')
+        sys.exit(1)
+        return False
 
     command = 'particle flash --serial --yes ' + argonSoftDevice
     print('attempting to flash argon soft device update')
@@ -387,6 +397,7 @@ updateBootloader()
 #
 #
 updateArgonShit()
+updateArgonSoftdevice()
 
 
 #
