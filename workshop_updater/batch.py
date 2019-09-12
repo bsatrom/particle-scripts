@@ -23,6 +23,7 @@ serialPortPrefix = "/dev/"
 isWindows = False
 
 argonNCPUpdate = 'argon-ncp-firmware-0.0.5-ota.bin'
+argonSoftDevice = 'argon-softdevice@1.4.0.bin'
 
 
 def getBaudCommand(p, baud):
@@ -87,7 +88,7 @@ def inspect():
 
     flag1 = "Bootloader module #0 - version 500," in text
     flag2 = "System module #1 - version 1401," in text
-    flag3 = "UUID: E2F320994F576FE6463F9D6CFD40911B4750E8B071DED794EBC8CD0D2976D157" in text
+    flag3 = "UUID: 7909E1B9C85B3FA0FA79ABC986DB67D9473D96A4FF33F8AF085CAEFE48A34448" in text
 
 
 # Platform: 12 - Argon
@@ -346,6 +347,13 @@ def updateArgonShit():
     command = 'particle flash --serial --yes ' + argonNCPUpdate
     print('attempting to flash argon esp32 update')
     subprocess.call(command, shell=True)
+
+
+    command = 'particle flash --serial --yes ' + argonSoftDevice
+    print('attempting to flash argon soft device update')
+    subprocess.call(command, shell=True)
+
+
     time.sleep(5)
 
 
