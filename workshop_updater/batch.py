@@ -12,9 +12,9 @@ import subprocess
 
 # configuration region:
 
-systemPart1Filename = 'argon-system-part1-1.3.1.bin'
-mainApplicationFilename = 'argon-tinker-1.3.1.bin'
-bootloaderFilename = 'argon-bootloader-1.3.1.bin'
+systemPart1Filename = 'argon-system-part1-1.4.0.bin'
+mainApplicationFilename = 'argon-tinker-1.4.0.bin'
+bootloaderFilename = 'argon-bootloader-1.4.0.bin'
 dfuDeviceID = "2b04:d00c"
 systemPart1Address = '0x00030000'
 userAppAddress = '0x000D4000'
@@ -85,8 +85,8 @@ def inspect():
     #
     #
 
-    flag1 = "Bootloader module #0 - version 401," in text
-    flag2 = "System module #1 - version 1321," in text
+    flag1 = "Bootloader module #0 - version 500," in text
+    flag2 = "System module #1 - version 1401," in text
     flag3 = "UUID: E2F320994F576FE6463F9D6CFD40911B4750E8B071DED794EBC8CD0D2976D157" in text
 
 

@@ -277,3 +277,18 @@ Your system firmware version is 1.2.1
 
 Your device id is e00fce68bbdb181edd76a88c
 Your system firmware version is 1.2.1
+
+Your device id is e00fce68bdcb9c8c2228a3f4
+Your system firmware version is 1.3.1
+
+Your device id is e00fce68d959b753e74d648f
+Your system firmware version is 1.3.1
+
+Your device id is e00fce6869e386d1313d89ae
+Your system firmware version is 1.3.1
+
+Your device id is e00fce68c697f47b33ae8695
+Your system firmware version is 1.3.1
+
+Your device id is e00fce68b9adb142bc2ac7c0
+Your system firmware version is 1.3.1
